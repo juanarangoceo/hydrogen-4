@@ -1,3 +1,5 @@
 {
-  "framework": "remix"
+  "framework": "remix",
+  "buildCommand": "shopify hydrogen build --codegen",
+  "outputDirectory": "dist/client"
 } 

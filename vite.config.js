@@ -4,7 +4,6 @@ import {oxygen} from '@shopify/mini-oxygen/vite';
 import {vitePlugin as remix} from '@remix-run/dev';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite';
-import {vercelPreset} from '@vercel/remix-vite-plugin';
 
 export default defineConfig({
   plugins: [
@@ -12,7 +11,7 @@ export default defineConfig({
     hydrogen(),
     oxygen(),
     remix({
-      presets: [vercelPreset()],
+      presets: [hydrogen.preset()],
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
@@ -27,6 +26,8 @@ export default defineConfig({
     // Allow a strict Content-Security-Policy
     // withtout inlining assets as base64:
     assetsInlineLimit: 0,
+    minify: false,
+    cssMinify: false,
     rollupOptions: {
       output: {
         manualChunks: undefined
