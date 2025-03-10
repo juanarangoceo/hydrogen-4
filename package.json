@@ -5,7 +5,7 @@
   "version": "2025.1.2",
   "type": "module",
   "scripts": {
-    "build": "shopify hydrogen build --codegen && mkdir -p build && cp -r dist/client/* build/ && cp -r dist/server build/",
+    "build": "shopify hydrogen build --codegen",
     "dev": "shopify hydrogen dev --codegen",
     "preview": "shopify hydrogen preview --build",
     "lint": "eslint --no-error-on-unmatched-pattern .",
