@@ -1,0 +1,17 @@
+{
+  "framework": "remix",
+  "buildCommand": "shopify hydrogen build --codegen",
+  "devCommand": "shopify hydrogen dev --codegen",
+  "installCommand": "npm install",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+} 
